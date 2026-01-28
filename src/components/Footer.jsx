@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: 'Instagram', icon: '📷', url: '#' },
+    { name: 'Instagram', icon: '📷', url: 'https://www.instagram.com/buntynamberdar' },
     { name: 'Facebook', icon: '📘', url: '#' },
     { name: 'Twitter', icon: '🐦', url: '#' },
     { name: 'YouTube', icon: '📺', url: '#' },
@@ -93,8 +93,8 @@ const Footer = () => {
         {/* Credits */}
         <div className="text-center mt-8 pt-8 border-t border-gray-700">
           <p className="text-gray-500 text-xs">
-            Made with ❤️ using React & Tailwind CSS | 
-            Powered by ChatGPT Assistant
+            Made with ❤️ by Sushil Khichar | 
+            Powered by 99flash.fun
           </p>
         </div>
       </div>

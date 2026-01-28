@@ -8,9 +8,11 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Assistant from './pages/Assistant';
+import Popup from './components/Popup';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     // Check for saved dark mode preference or default to light mode
@@ -22,6 +24,12 @@ function App() {
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       setDarkMode(prefersDark);
     }
+
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -39,6 +47,10 @@ function App() {
     setDarkMode(!darkMode);
   };
 
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
     <Router>
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
@@ -54,6 +66,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        {showPopup && <Popup handleClose={closePopup} />}
       </div>
     </Router>
   );
