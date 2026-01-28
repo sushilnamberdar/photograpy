@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import instagramLogo from '../logo/instagram.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: 'Instagram', icon: '📷', url: 'https://www.instagram.com/buntynamberdar' },
+    { name: 'Instagram', icon: <img src={instagramLogo} alt="Instagram" className="w-6 h-6" />, url: 'https://www.instagram.com/buntynamberdar' },
     { name: 'Facebook', icon: '📘', url: '#' },
     { name: 'Twitter', icon: '🐦', url: '#' },
     { name: 'YouTube', icon: '📺', url: '#' },
@@ -17,7 +18,6 @@ const Footer = () => {
     { name: 'About', path: '/about' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
-    { name: 'Assistant', path: '/assistant' },
   ];
 
   return (

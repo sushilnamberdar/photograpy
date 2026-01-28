@@ -7,7 +7,6 @@ import Gallery from './pages/Gallery';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
-import Assistant from './pages/Assistant';
 import Popup from './components/Popup';
 
 function App() {
@@ -62,7 +61,6 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/assistant" element={<Assistant />} />
           </Routes>
         </main>
         <Footer />

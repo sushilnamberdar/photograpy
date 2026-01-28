@@ -1,4 +1,5 @@
 import React from 'react';
+import instagramLogo from '../logo/instagram.png';
 
 const Popup = ({ handleClose }) => {
   return (
@@ -15,8 +16,9 @@ const Popup = ({ handleClose }) => {
           href="https://www.instagram.com/buntynamberdar"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="inline-flex items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
+          <img src={instagramLogo} alt="Instagram" className="w-6 h-6 mr-2" />
           Follow @buntynamberdar
         </a>
         <button

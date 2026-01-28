@@ -11,7 +11,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     { name: 'About', path: '/about' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
-    { name: 'Assistant', path: '/assistant' },
   ];
 
   const isActive = (path) => location.pathname === path;
